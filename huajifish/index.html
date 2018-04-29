@@ -6,6 +6,27 @@
 	<meta content="width=device-width,user-scalable=no" name="viewport">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		#pr
+		{
+			display: block;
+			width: 100%;
+			padding: 16px;
+			box-sizing: border-box;
+			background: #f1f1f1;
+			transition: 1s;
+			-moz-transition: 1s;
+			-webkit-transition: 1s;
+			-o-transition: 1s;
+			position: fixed;
+			color: #272727;
+		}
+
+		.gl
+		{
+			color: #fff;
+		}
+	</style>
 	<script type="text/javascript">
 		window.onload = function() {
 			var height = document.body.clientHeight&&document.documentElement.clientHeight;
@@ -19,6 +40,9 @@
 				document.getElementById('mb2').style.display = "none";
 				document.getElementById('mb1').style.display = "flex";
 				document.getElementById('obj').style.padding = "10% 10%";
+			}
+			if (document.body.clientWidth >= 1200&&document.documentElement.clientWidth >= 1200) {
+				p("如果显示比例过大，请使用推荐的缩放比例：90%");
 			}
 		}
 
@@ -48,6 +72,14 @@
 			}
 		}
 	</script>
+	<script type="text/javascript">
+		function p(str) {
+			document.getElementById('pr').innerHTML = str;
+			document.getElementById('pr').style = "top: 62px;";
+			setTimeout(function() {document.getElementById('pr').style = "top: -100%;";},6000);
+			setTimeout(function() {document.getElementById('pr').innerHTML = null;},7000);
+		}
+	</script>
 </head>
 <body>
 	<div class="menu_bar" id="mb1">
@@ -60,6 +92,7 @@
 		<img src="images/logo.png" title="logo" class="logo">
 		<button class="menu_btn1" style="width: 30px;background: url('images/menu.png');background-size: 30px 30px;" id="menu_c" onclick="m()"></button>
 	</div>
+	<div id="pr" style="top: -100%;">&nbsp;</div>
 	<div style="transition: 0.4s;-moz-transition: 0.4s;-webkit-transition: 0.4s;-o-transition: 0.4s;position: fixed;top: -100%;left: 0;z-index: 20;background: #ffffff;width: 100%;" id="mbm">
 		<a class="m_btn" href="#aboutus" onclick="m()" style="border-top: none;">关于我们</a>
 		<a class="m_btn" href="#ours" onclick="m()">产品</a>
@@ -79,17 +112,18 @@
 	<div style="display: block;padding: 0 10%;padding-bottom: 0;box-sizing: border-box;">
 		<div id="ours">
 			<h1 style="display: block;text-align: center;">我们的产品</h1>
-			<a href="#buy" style="text-decoration: none;color: #000000;"><div style="display: block;box-sizing: border-box;box-shadow: 0px 0px 10px #a1a1a1;">
+			<a onclick="p('产品已下架！')" style="text-decoration: none;color: #000000;cursor: pointer;"><div style="display: block;box-sizing: border-box;box-shadow: 0px 0px 10px #a1a1a1;opacity: 0.5;">
 				<img src="images/p1.jpg" title="效果图片" alt="暂无图片" style="width: 100%;display: block;">
 				<div style="padding: 10px;width: 100%;box-sizing: border-box;"><p style="color: #ff2727;font-weight: bold;font-size: 1.5em;"><span style="font-size: 0.7em;">￥</span>3.00</p>
 				<p style="display: block;font-size: 1em;">H-1803型校牌</p>
 				<p style="display: block;font-size: 1em;color: #7e7e7e;">打印面板；手写字体；粘贴式设计，无别针。</p></div>
+				<div style="background: #ff0000;color: #ffffff;display: block;box-sizing: border-box;padding: 20px;text-align: center;" id="h1803N">该商品已售罄</div>
 			</div></a>
 			<a href="#buy" style="text-decoration: none;color: #000000;"><div style="display: block;box-sizing: border-box;box-shadow: 0px 0px 10px #a1a1a1;margin: 20px 0;">
 				<img src="images/p2.jpg" title="效果图片" alt="暂无图片" style="width: 100%;display: block;">
-				<div style="padding: 10px;width: 100%;box-sizing: border-box;"><p style="color: #ff2727;font-weight: bold;font-size: 1.5em;"><span style="font-size: 0.7em;">￥</span>暂无价格</p>
-				<p style="display: block;font-size: 1em;">H-18X型校牌</p>
-				<p style="display: block;font-size: 1em;color: #7e7e7e;">打印面板；手写字体；环保纸板底板。</p></div>
+				<div style="padding: 10px;width: 100%;box-sizing: border-box;"><p style="color: #ff2727;font-weight: bold;font-size: 1.5em;"><span style="font-size: 0.7em;">￥</span>3.00</p>
+				<p style="display: block;font-size: 1em;">滑稽鱼2代校牌</p>
+				<p style="display: block;font-size: 1em;color: #7e7e7e;">打印面板；手写字体；加厚底板；粘贴式设计，无别针。</p></div>
 			</div></a>
 		</div>
 		<div id="buy">
@@ -103,15 +137,19 @@
 	</div>
 	<div class="info">
 		<div>
-			<p>滑稽鱼 HuajiFish</p>
+			<p>滑稽鱼Github网站&nbsp;&nbsp;&nbsp;HuajiFish on Github</p>
+			<a href="//github.com/TheGodOfHuaji/website">Fork me on Github!</a>
 			<a href="#">网站制作By张宇宸</a>
-			<a href="#">&copy;2018 Huajifish.yishionz.cn</a>
+			<a href="#">&copy;2018 Thegodofhuaji.github.io/website/huajifish</a>
 		</div>
 		<div>
 			<p>友情链接</p>
-			<a href="http://hostinger.com.hk">Hostinger</a>
-			<a href="http://www.njtianli.com">内江天立国际学校官网</a>
+			<a href="//github.com">Github</a>
+			<a href="http://hostinger.com.hk" target="_blank">Hostinger</a>
+			<a href="http://www.njtianli.com" target="_blank">内江天立（国际）学校官网</a>
+			<a href="http://iconfont.cn" target="_blank">Iconfont</a>
 		</div>
+		<a href="//github.com"><img src="images/github.png" style="height: 30px;"></a>
 	</div>
 </body>
 </html>
