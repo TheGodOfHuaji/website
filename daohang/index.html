@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>主页</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/indexPageFunctions.js"></script>
+	<script type="text/javascript" src="js/indexPageMain.js"></script>
+	<style type="text/css">
+		.bdSug_wpr
+		{
+			border-radius: 20px !important;
+			border: 2px solid #0084ff !important;
+		}
+
+		table
+		{
+			border-radius: 20px !important;
+			padding: 10px 2px !important;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body id="body" style="">
+	<div class="top_box">
+		<div class="top_bar">
+			<div class="left_box"></div><div class="right_box"></div>
+		</div>
+		<div class="logo" style="margin: 30px 0;"><!-- <img src="images/logo-l.png"> --></div>
+	</div>
+	<div class="center_box">
+		<form id="search">
+			<input type="hidden" name="tn" id="ipt1" value="baidu">
+			<input type="text" name="wd" id="kw" class="input" placeholder="搜索或输入网址" autocomplete="off" baiduSug="1"><input type="button" name="sub" class="submit" value="Go" onclick="submitS()" id="searchSubmit">
+			<input type="text" name="no-submit" style="display: none;">
+		</form>
+	</div>
+	<div class="bottom_box">
+		<div class="links_box">
+			<h1>网址导航</h1>
+			<div class="links_b" style="margin-top: 10px;">
+				<div class="link_out" onclick="window.open('https://www.zhihu.com/')"><div class="link_ico zhihu"><img src="images/zhihu.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">知乎</p></div>
+				<div class="link_out" onclick="window.open('https://www.douban.com/')"><div class="link_ico douban"><img src="images/douban.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">豆瓣</p></div>
+				<div class="link_out" onclick="window.open('https://www.taobao.com/')"><div class="link_ico taobao"><img src="images/taobao.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">淘宝</p></div>
+				<div class="link_out" onclick="window.open('https://www.bilibili.com/')"><div class="link_ico bilibili"><img src="images/bilibili.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">哔哩哔哩</p></div>
+				<div class="link_out" onclick="window.open('https://weibo.com/')"><div class="link_ico sinaweibo"><img src="images/sinaweibo.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">新浪微博</p></div>
+				<div class="link_out" onclick="window.open('https://www.youku.com/')"><div class="link_ico youku"><img src="images/youku.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">优酷</p></div>
+			</div>
+			<div class="links_b">
+				<div class="link_out" onclick="window.open('https://www.jd.com/')"><div class="link_ico jingdong"><img src="images/jingdong.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">京东</p></div>
+				<div class="link_out" onclick="window.open('https://www.sina.com.cn/')"><div class="link_ico sina"><img src="images/sina.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">新浪网</p></div>
+				<div class="link_out" onclick="window.open('https://pan.baidu.com/')"><div class="link_ico bdwangpan"><img src="images/bdwangpan.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">百度网盘</p></div>
+				<div class="link_out" onclick="window.open('http://www.iqiyi.com/')"><div class="link_ico iqiyi"><img src="images/iqiyi.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">爱奇艺</p></div>
+				<div class="link_out" onclick="window.open('http://www.qq.com/')"><div class="link_ico tencentnews"><img src="images/tencentnews.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">腾讯新闻</p></div>
+				<div class="link_out" onclick="window.open('https://www.baidu.com/')"><div class="link_ico baidu"><img src="images/baidu.png" style="margin: 13px;width: 24px;height: 24px;"></div><p style="display: block;text-align: center;margin: 4px 0;color: #666666;">百度</p></div>
+			</div>
+		</div>
+		<div class="links_box">
+			<h1>想法<span style="color: #666666;font-size: 0.6em;line-height: 1em;">&nbsp;&nbsp;&nbsp;&nbsp;记录生活点滴</span></h1>
+			<div id="idea_q"><button class="idea_q_btn_c" onclick="this.className = 'idea_q_btn_c';document.getElementById('code').className = 'idea_q_btn';document.getElementById('idea').src = 'tools/notepad/index.html';document.getElementById('idea').style.height = '200px';" id="notepad">记事本</button><button class="idea_q_btn" onclick="this.className = 'idea_q_btn_d';document.getElementById('notepad').className = 'idea_q_btn';document.getElementById('idea').src = 'tools/code/index.html';document.getElementById('idea').style.height = '400px';" id="code">HTML代码</button></div>
+			<iframe src="tools/notepad/index.html" id="idea"></iframe>
+		</div>
+		<div class="links_box">
+			<h1>小工具</h1><br>
+			<button onclick="openTools('tools/ssqxhq/index.html','双色球选号器')" class="links_box_button">双色球选号器</button>
+			<button onclick="openTools('https://h5.m.taobao.com/','淘宝','mobile')" class="links_box_button">淘宝(可能无法正常使用)</button>
+			<button onclick="openTools('http://yishionz.cn/tools/weather','天气','mobile')" class="links_box_button">天气</button>
+			<button onclick="openTools('https://map.baidu.com','百度地图','map')" class="links_box_button">地图</button>
+			<button onclick="openTools('https://h5.ele.me','饿了么','mobile')" class="links_box_button">饿了么</button>
+			<button onclick="openTools('https://m.baidu.com','百度','mobile')" class="links_box_button">百度搜索</button>
+		</div>
+		<!-- <div style="display: block;border: 1px solid #ff0000;background: #ffffff;margin: 40px 15%;height: 80px;"><img src="images/music.jpg" style="width: 80px;height: 80px;display: inline-block;float: left;"><div style="height: 80px;display: inline-block;"><p style="margin: 6px;font-size: 1.15em;">Something Just Like This&nbsp;&nbsp;&nbsp;&nbsp;(无损音效)</p><img src="images/voice_stop.png" style="width: 36px;height: 36px;margin-left: 6px;cursor: pointer;" id="play" onclick="if (document.getElementById('msc').paused) {document.getElementById('msc').play();this.src = 'images/voice_play.png';} else {document.getElementById('msc').pause();this.src = 'images/voice_stop.png';}"></div></div><audio id="msc" style="height: 80px;"><source src="images/The Chainsmokers - Something Just Like This.flac"></audio> -->
+		<div class="tools_fi" style="display: none;" id="toolsFi"></div>
+		<script type="text/javascript">
+			function bigTools() {
+	document.getElementById('toolsS').onclick = smallTools;
+	document.getElementById('toolsIco').src = "icons/small.png";
+	document.getElementById('toolsIframe').style.width = "100%";
+	var bh = document.body.clientHeight;
+	var sh = document.getElementById("toolsTitleBody").offsetHeight;
+	document.getElementById('toolsIframe').style.height = bh - sh + "px";
+	document.getElementById('toolsTitleBody').style.width = "100%";
+	document.getElementById('toolsTitleBody').style.borderRadius = "0";
+	document.getElementById('toolsIframe').style.borderRadius = "0";
+	document.getElementById('toolsBody').style.padding = "0";
+}
+
+function smallTools() {
+	document.getElementById('toolsS').onclick = bigTools;
+	document.getElementById('toolsIco').src = "icons/big.png";
+	document.getElementById('toolsIframe').style.width = "60%";
+	document.getElementById('toolsIframe').style.height = null;
+	document.getElementById('toolsTitleBody').style.width = "60%";
+	document.getElementById('toolsTitleBody').style.borderRadius = "8px 8px 0 0";
+	document.getElementById('toolsIframe').style.borderRadius = "0 0 8px 8px";
+	document.getElementById('toolsBody').style.padding = "40px 20%";
+}
+		</script>
+		<div class="tools_body" style="display: none;" id="toolsBody">
+			<div class="tools_title" id="toolsTitleBody"><div id="toolsTitle" style="display: inline-block;line-height: 16px;">&nbsp;</div><div style="float: right;cursor: pointer;" onclick="closeTools()"><img src="icons/close.png" style="width: 20.667px;height: 20.667px;"></div><div style="float: right;cursor: pointer;margin-right: 8px;" onclick="bigTools()" id="toolsS"><img src="icons/big.png" style="width: 20.667px;height: 20.667px;" id="toolsIco"></div></div>
+			<iframe src="" class="tools_iframe" id="toolsIframe"></iframe>
+		</div>
+	</div>
+	<div id="setup_body">
+		<h1>这是一些基础设置</h1>
+		<p>背景颜色/图片(不填默认为白色)</p>
+		<input type="text" name="background-color" id="setup_background" placeholder="#ffffff , rgb(0,0,0) 或 http://xx.com/xx.jpg"><br>
+		<p>搜索提示(默认为开)</p>
+		<select name="search" id="setup_search">
+			<option value="true">开</option>
+			<option value="false">关</option>
+		</select>
+		<br><br><br>
+		<button onclick="subSettings()">确定</button>
+	</div>
+	<script type="text/javascript" src="js/opensug.js" id="sc-a"></script>
+	<script type="text/javascript" id="sc-b">
+		document.getElementById("kw").focus(); 
+		var txtObj = document.getElementById("alertSpan");
+		function show(str){
+			txtObj.innerHTML = str;
+		}
+		var params = {
+		"XOffset": 0,
+		"YOffset": 0,
+		"fontColor": "#666666",
+		"fontColorHI": "#222222",
+		"fontSize": "1em",
+		"fontFamily": "Microsoft YaHei",
+		"borderColor": "#d8d8d8",
+		"bgcolorHI": "#e8e8e8",
+		"sugSubmit": false,
+	};
+	BaiduSuggestion.bind("ipt1",params,show);
+	</script>
+	<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","https://widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "10px 10px",
+    "language": "auto",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UCB084F87A",
+    "hash": "da0d4c2bd82e411e8bf42bc3ff9dd446"
+});
+tpwidget("show");</script>
+	<link rel="stylesheet" type="text/css" href="css/indexPageStyle.css" id="style">
+</body>
+</html>
