@@ -467,6 +467,18 @@ p
 	background: #0084ff;
 }
 
+.settings_box
+{
+	display: block;
+	width: 100%;
+	padding: 40px;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 0px 10px #a1a1a1;
+}
+
 /* 测试 
 
 .btn-audio{
