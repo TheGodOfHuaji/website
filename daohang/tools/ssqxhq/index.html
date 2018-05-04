@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>双色球选号器</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	body
+	{
+		text-align: center;
+		width: 50%;
+		height: auto;
+		border: 2px solid #272727;
+		padding: 20px;
+		padding-bottom: 0;
+	}
+		.red
+		{
+			padding: 10px;
+			background: #ffc9c9;
+			color: #ff0000;
+			font-family: Arial,Microsoft YaHei,sans-serif;
+			border-radius: 40px;
+			display: inline-block;
+			line-height: 16px;
+			width: 36px;
+			height: 36px;
+			box-sizing: border-box;
+			transition-duration: 0.3s;
+			-webkit-transition-duration: 0.3s;
+		}
+
+		.blue
+		{
+			padding: 10px;
+			background: #c9c9ff;
+			color: #0000ff;
+			font-family: Arial,Microsoft YaHei,sans-serif;
+			border-radius: 40px;
+			display: inline-block;
+			line-height: 16px;
+			width: 36px;
+			height: 36px;
+			box-sizing: border-box;
+			transition-duration: 0.3s;
+			-webkit-transition-duration: 0.3s;
+		}
+
+		.outbox
+		{
+			display: flex;
+			display: -webkit-flex;
+			-webkit-justify-content: space-around;
+			justify-content: space-around;
+		}
+
+		button
+		{
+			margin: 40px;
+			padding: 10px;
+			background: #ff3333;
+			color: #ffffff;
+			outline: 0;
+			border-radius: 100px;
+			border: none;
+			font-size: 1.05em;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		function xh() {
+			var r1 = Math.floor(Math.random()*33+1);
+			var r2 = Math.floor(Math.random()*33+1);
+			var r3 = Math.floor(Math.random()*33+1);
+			var r4 = Math.floor(Math.random()*33+1);
+			var r5 = Math.floor(Math.random()*33+1);
+			var r6 = Math.floor(Math.random()*33+1);
+			var b1 = Math.floor(Math.random()*16+1);
+			if (r1 < 10) {
+				document.getElementById('r1').innerHTML = "0" + r1;
+			} else {
+				document.getElementById('r1').innerHTML = r1;
+			}
+
+			if (r2 < 10) {
+				document.getElementById('r2').innerHTML = "0" + r2;
+			} else {
+				document.getElementById('r2').innerHTML = r2;
+			}
+			
+			if (r3 < 10) {
+				document.getElementById('r3').innerHTML = "0" + r3;
+			} else {
+				document.getElementById('r3').innerHTML = r3;
+			}
+
+			if (r4 < 10) {
+				document.getElementById('r4').innerHTML = "0" + r4;
+			} else {
+				document.getElementById('r4').innerHTML = r4;
+			}
+			
+			if (r5 < 10) {
+				document.getElementById('r5').innerHTML = "0" + r5;
+			} else {
+				document.getElementById('r5').innerHTML = r5;
+			}
+			
+			if (r6 < 10) {
+				document.getElementById('r6').innerHTML = "0" + r6;
+			} else {
+				document.getElementById('r6').innerHTML = r6;
+			}
+			
+			if (b1 < 10) {
+				document.getElementById('b1').innerHTML = "0" + b1;
+			} else {
+				document.getElementById('b1').innerHTML = b1;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="outbox"><div class="red" id="r1"></div><div class="red" id="r2"></div><div class="red" id="r3"></div><div class="red" id="r4"></div><div class="red" id="r5"></div><div class="red" id="r6"></div><div class="blue" id="b1"></div></div>
+	<button onclick="xh()">随机选号</button>
+</body>
+</html>
