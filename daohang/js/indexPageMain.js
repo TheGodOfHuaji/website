@@ -4,6 +4,7 @@ window.onload = function() {
 	// document.getElementById('idea').style.height = ideaHeight + "px";
 	setTimeout("document.getElementById('kw').style = 'transition: 0.4s;-moz-transition: 0.4s;-webkit-transition: 0.4s;-o-transition: 0.4s;';document.getElementById('searchSubmit').style = 'transition: 0.4s;-moz-transition: 0.4s;-webkit-transition: 0.4s;-o-transition: 0.4s;';",400);
 	getSettings();
+	document.getElementById('set_background').value = getCookie('background');
 }
 
 document.onkeydown = function (event) {
