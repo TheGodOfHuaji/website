@@ -1,155 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>滑稽鱼HuajiFish - 为梦奋斗</title>
+	<title>滑稽鱼 - 砥砺前行</title>
 	<meta charset="utf-8">
-	<meta content="width=device-width,user-scalable=no" name="viewport">
+	<script type="text/javascript" src="main.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="jquery.js"></script>
-	<style type="text/css">
-		#pr
-		{
-			display: block;
-			width: 100%;
-			padding: 16px;
-			box-sizing: border-box;
-			background: #f1f1f1;
-			transition: 1s;
-			-moz-transition: 1s;
-			-webkit-transition: 1s;
-			-o-transition: 1s;
-			position: fixed;
-			color: #272727;
-		}
-
-		.gl
-		{
-			color: #fff;
-		}
-	</style>
-	<script type="text/javascript">
-		window.onload = function() {
-			var height = document.body.clientHeight&&document.documentElement.clientHeight;
-			var width = document.body.clientWidth&&document.documentElement.clientWidth;
-			var hw = height / width;
-			if (hw >= 1) {
-				document.getElementById('mb1').style.display = "none";
-				document.getElementById('mb2').style.display = "flex";
-				document.getElementById('obj').style.padding = "30% 10%";
-			} else {
-				document.getElementById('mb2').style.display = "none";
-				document.getElementById('mb1').style.display = "flex";
-				document.getElementById('obj').style.padding = "10% 10%";
-			}
-			if (document.body.clientWidth >= 1200&&document.documentElement.clientWidth >= 1200) {
-				p("如果显示比例过大，请使用推荐的缩放比例：90%");
-			}
-		}
-
-		window.onresize = function() {
-			var height = document.body.clientHeight&&document.documentElement.clientHeight;
-			var width = document.body.clientWidth&&document.documentElement.clientWidth;
-			var hwo = height / width;
-			if (hwo >= 1) {
-				document.getElementById('mb1').style.display = "none";
-				document.getElementById('mb2').style.display = "flex";
-				document.getElementById('obj').style.padding = "30% 10%";
-			} else {
-				document.getElementById('mb2').style.display = "none";
-				document.getElementById('mb1').style.display = "flex";
-				document.getElementById('obj').style.padding = "10% 10%";
-			}
-		}
-	</script>
-	<script type="text/javascript">
-		function m() {
-			if (document.getElementById('mbm').style.top == "62px") {
-				document.getElementById('mbm').style.top = "-100%";
-				document.getElementById('fi').style.display = "none";
-			} else {
-				document.getElementById('mbm').style.top = "62px";
-				document.getElementById('fi').style.display = "block";
-			}
-		}
-	</script>
-	<script type="text/javascript">
-		function p(str) {
-			document.getElementById('pr').innerHTML = str;
-			document.getElementById('pr').style = "top: 62px;";
-			setTimeout(function() {document.getElementById('pr').style = "top: -100%;";},6000);
-			setTimeout(function() {document.getElementById('pr').innerHTML = null;},7000);
-		}
-	</script>
 </head>
 <body>
-	<div class="menu_bar" id="mb1">
-		<img src="images/logo.png" title="logo" class="logo" onclick="window.location.href = 'index.html';">
-		<a href="#aboutus" class="menu_btn">关于我们</a>
-		<a href="#ours" class="menu_btn">产品</a>
-		<a href="#buy" class="menu_btn">购买</a>
+	<div class="body menu_bar" id="menu_bar">
+		<div class="logo"><i></i><p>滑稽鱼</p></div>
+		<a href="#" class="menu_bar_btn">主页</a>
+		<a href="#ct1" class="menu_bar_btn">优势</a>
+		<a href="#ct2" class="menu_bar_btn">产品</a>
+		<a href="#ct3" class="menu_bar_btn">代言</a>
+		<a href="#ct4" class="menu_bar_btn">关于</a>
 	</div>
-	<div class="menu_bar" id="mb2" style="display: none;">
-		<img src="images/logo.png" title="logo" class="logo">
-		<button class="menu_btn1" style="width: 30px;background: url('images/menu.png');background-size: 30px 30px;" id="menu_c" onclick="m()"></button>
+	<div class="body menu_bar" id="menu_bar2" style="position: fixed;top: -68px;left: 0;box-shadow: none;">
+		<div class="logo"><i></i><p>滑稽鱼</p></div>
+		<a href="#" class="menu_bar_btn">主页</a>
+		<a href="#ct1" class="menu_bar_btn">优势</a>
+		<a href="#ct2" class="menu_bar_btn">产品</a>
+		<a href="#ct3" class="menu_bar_btn">代言</a>
+		<a href="#ct4" class="menu_bar_btn">关于</a>
 	</div>
-	<div id="pr" style="top: -100%;">&nbsp;</div>
-	<div style="transition: 0.4s;-moz-transition: 0.4s;-webkit-transition: 0.4s;-o-transition: 0.4s;position: fixed;top: -100%;left: 0;z-index: 20;background: #ffffff;width: 100%;" id="mbm">
-		<a class="m_btn" href="#aboutus" onclick="m()" style="border-top: none;">关于我们</a>
-		<a class="m_btn" href="#ours" onclick="m()">产品</a>
-		<a class="m_btn" href="#buy" onclick="m()">购买</a>
-	</div>
-	<div id="fi" style="-o-transition: 0.4s;width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: black;opacity: 0.3;z-index: 19;display: none;" onclick="m()"></div>
-	<div id="aboutus">
-		<div id="obj" style="height: 100%;padding: 10% 10%;box-sizing: border-box;background: url('images/pic.png') no-repeat;background-size: 100% auto;">
-			<h1>关于我们</h1>
-			<p>内江天立国际学校-滑稽鱼校牌公司</p>
-			<p style="font-weight: bold;display: inline-block;">张宇宸&nbsp;&nbsp;</p><p style="display: inline-block;">技术总监 兼 线上销售</p><br>
-			<p style="font-weight: bold;display: inline-block;">余佳晋&nbsp;&nbsp;</p><p style="display: inline-block;">生产总监 兼 线下销售</p>
-			<br>
-			<p>我们仿制学校校牌，仿真度达70%，价格低40%</p>
+	<div class="filter_black"></div>
+	<div class="body index_pic">
+		<img src="images/index_pic.jpg" style="width: 100%;position: fixed;top: 0;left: 0;z-index: -3;">
+		<div>
+			<h1>滑稽鱼 HuajiFish</h1>
+			<p><span style="font-weight: bold;">张宇宸</span>&nbsp;&nbsp;技术总监 兼 线上销售</p>
+			<p><span style="font-weight: bold;">余佳晋</span>&nbsp;&nbsp;生产总监 兼 线下销售</p><br>
+			<a href="#ct4" class="pic_content_btn">了解更多</a>
 		</div>
 	</div>
-	<div style="display: block;padding: 0 10%;padding-bottom: 0;box-sizing: border-box;">
-		<div id="ours">
-			<h1 style="display: block;text-align: center;">我们的产品</h1>
-			<a onclick="p('产品已下架！')" style="text-decoration: none;color: #000000;cursor: pointer;"><div style="display: block;box-sizing: border-box;box-shadow: 0px 0px 10px #a1a1a1;opacity: 0.5;">
-				<img src="images/p1.jpg" title="效果图片" alt="暂无图片" style="width: 100%;display: block;">
-				<div style="padding: 10px;width: 100%;box-sizing: border-box;"><p style="color: #ff2727;font-weight: bold;font-size: 1.5em;"><span style="font-size: 0.7em;">￥</span>3.00</p>
-				<p style="display: block;font-size: 1em;">H-1803型校牌</p>
-				<p style="display: block;font-size: 1em;color: #7e7e7e;">打印面板；手写字体；粘贴式设计，无别针。</p></div>
-				<div style="background: #ff0000;color: #ffffff;display: block;box-sizing: border-box;padding: 20px;text-align: center;" id="h1803N">该商品已售罄</div>
-			</div></a>
-			<a href="#buy" style="text-decoration: none;color: #000000;"><div style="display: block;box-sizing: border-box;box-shadow: 0px 0px 10px #a1a1a1;margin: 20px 0;">
-				<img src="images/p2.jpg" title="效果图片" alt="暂无图片" style="width: 100%;display: block;">
-				<div style="padding: 10px;width: 100%;box-sizing: border-box;"><p style="color: #ff2727;font-weight: bold;font-size: 1.5em;"><span style="font-size: 0.7em;">￥</span>3.00</p>
-				<p style="display: block;font-size: 1em;">滑稽鱼2代校牌</p>
-				<p style="display: block;font-size: 1em;color: #7e7e7e;">打印面板；手写字体；加厚底板；粘贴式设计，无别针。</p></div>
-			</div></a>
+	<div class="body content" id="ct1">
+		<h1>我们的优势</h1>
+		<div class="content_body">
+			<div class="content_place" style="background: url('images/place_paris.jpg');background-size: auto 100%;">
+				<div class="place_bkgd">价格<p style="font-size: 60%;">我们的定价:￥3.00<br>学校定价:￥5.00<br>价格降低40%</p></div>
+			</div>
+			<div class="content_place" style="background: url('images/place_newyork.jpg');background-size: auto 100%;">
+				<div class="place_bkgd">仿真度<p style="font-size: 60%;">全打印彩纸，仿真度达70%</p></div>
+			</div>
+			<div class="content_place" style="background: url('images/place_rome.jpg');background-size: auto 100%;">
+				<div class="place_bkgd">方便<p style="font-size: 60%;">就在学校里，取货方便，效率高</p></div>
+			</div>
+			<div class="content_place" style="background: url('images/place_beijing.jpg');background-size: auto 100%;">
+				<div class="place_bkgd">快捷<p style="font-size: 60%;">当学校没有校牌时，我们是最快捷的选择</p></div>
+			</div>
 		</div>
-		<div id="buy">
-			<h1 style="display: block;text-align: center;">购买</h1>
-			<div>
-				<button class="pay_btn" onclick="window.location.href = 'images/wx.png';">微信支付(￥3.00)</button>
-				<button class="pay_btn" onclick="window.location.href = 'images/alp.jpg';">支付宝支付(￥3.00)</button>
-				<div class="err">注意：此购买渠道仅限于初一二班的学生；支付时请备注校牌上的信息（姓名、班级）以及购买者姓名，否则购买失败。</div>
+		<a href="#ct2" class="content_btn">去购买</a><br><br><br>
+	</div>
+	<div class="body content_c" style="background: #0a61db" id="ct2">
+		<h1>产品</h1>
+		<div class="content_body">
+			<div class="content_buy">
+				<img src="images/p1.jpg">
+				<h1 class="buy_r">已售罄</h1>
+				<h1>滑稽鱼H-1803型校牌</h1>
+				<p>打印面板；手写字体；粘贴式设计，无别针。</p>
+			</div>
+			<div class="content_buy" onclick="window.open('cart.html')">
+				<img src="images/p1.jpg">
+				<h1 class="buy_r"><span style="font-size: 70%;font-family: Microsoft YaHei;">￥</span>3.00</h1>
+				<h1>滑稽鱼2代校牌</h1>
+				<p>打印面板；手写字体；加厚底板；全新工艺。</p>
 			</div>
 		</div>
 	</div>
-	<div class="info">
-		<div>
-			<p>滑稽鱼Github网站&nbsp;&nbsp;&nbsp;HuajiFish on Github</p>
-			<a href="//github.com/TheGodOfHuaji/website">Fork me on Github!</a>
-			<a href="#">网站制作By张宇宸</a>
-			<a href="#">&copy;2018 Thegodofhuaji.github.io/website/huajifish</a>
+	<div class="body content_c" style="background: #ffffff;color: #272727;" id="ct3">
+		<h1>独家代言</h1>
+		<p>内江天立初一二班——东北F4</p>
+		<div class="content_body">
+			<div class="name_box" onclick="openI('zjc')" id="name_zjc">郑靖川</div>
+			<div class="name_box" onclick="openI('zmk')" id="name_zmk">张孟轲</div>
+			<div class="name_box" onclick="openI('zjh')" id="name_zjh">曾金恒</div>
+			<div class="name_box" onclick="openI('lrk')" id="name_lrk">冷睿康</div>
 		</div>
-		<div>
-			<p>友情链接</p>
-			<a href="//github.com">Github</a>
-			<a href="http://hostinger.com.hk" target="_blank">Hostinger</a>
-			<a href="http://www.njtianli.com" target="_blank">内江天立（国际）学校官网</a>
-			<a href="http://iconfont.cn" target="_blank">Iconfont</a>
-		</div>
-		<a href="//github.com"><img src="images/github.png" style="height: 30px;"></a>
 	</div>
+	<div class="body content_c" style="background: #d9609b;color: #ffffff;" id="ct4">
+		<h1>关于</h1>
+		<p style="font-weight: bold;font-size: 1.15em;">关于我们</p>
+		<p>我们出售仿真学校校牌</p>
+		<p style="font-weight: bold;font-size: 1.15em;">关于本站</p>
+		<p>所有代码都是我一个人敲出来的！！！</p>
+		<p>本站所有中文字体为：<a href="http://www.foundertype.com/index.php/FontInfo/index/id/199.html" style="color: #ffffff;" target="_blank">方正清刻本悦宋简体</a></p>
+		<p style="font-weight: bold;font-size: 1.15em;">想说的话</p>
+		<p>说实话，当初真没想到要做这个</p>
+		<p>也没指望发家致富</p>
+		<p>正如前网站Title一样，“为梦奋斗”</p>
+		<p>在学习之余，我抽出时间写了这个网站，甚至其中还有一个一个70多行的function</p>
+		<p>也希望，我们能如现在的Title一样，“砥砺前行”！</p>
+		<p>还有，你看了<a href="http://www.njtianli.com" style="color: #ffffff;" target="_blank">学校网站</a>之后，就知道这网站有多良心！</p>
+		<p>——2018.5.26 张宇宸</p>
+		<br>
+	</div>
+	<div class="bottom-box">
+		<div class="bottom-logo" id="bottomLogo">
+			<p id="logoText" onclick="window.location.href = 'index.html';">HuajiFish</p>
+		</div>
+		<div class="bottom-box-box1">
+			<div>
+				<h1>友情链接</h1>
+				<a href="http://www.njtianli.com" target="_blank">内江天立（国际）学校</a>
+				<a href="https://github.com" target="_blank">GitHub</a>
+				<a href="http://iconfont.cn" target="_blank">Iconfont</a>
+				<a href="http://www.foundertype.com/" target="_blank">方正字库</a>
+			</div>
+			<div>
+				<h1>关于</h1>
+				<a href="#">网站制作By张宇宸</a>
+			</div>
+			<div>
+				<h1>站内</h1>
+				<a href="cart.html" target="_blank">购买页</a>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bottombox">&nbsp;&copy;2018 HuajiFish.All Rights Reserved.（伪）</div>
 </body>
 </html>
